@@ -20,8 +20,12 @@ function Lesson() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const module = await import(`../../data/${id}.json`);
-        setData(module.default);
+        const response = await fetch(`/data/${id}.json`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch lesson data');
+        }
+        const jsonData = await response.json();
+        setData(jsonData);
       } catch (error) {
         console.error('Failed to load lesson data:', error);
       } finally {
