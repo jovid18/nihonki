@@ -56,7 +56,7 @@ function Lesson() {
     <div className="min-h-screen bg-gradient-to-br from-rose-50 to-indigo-100">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-4 flex items-center gap-4">
+        <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
           <button
             onClick={() => navigate('/')}
             className="text-gray-600 hover:text-gray-800 transition-colors"
@@ -67,6 +67,12 @@ function Lesson() {
             <span className="text-rose-500">{id}과</span>
             <span className="text-gray-400 text-lg ml-2">Lesson {id}</span>
           </h1>
+          <button
+            onClick={() => navigate(`/${id}/test`)}
+            className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold px-6 py-2 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+          >
+            테스트 시작
+          </button>
         </div>
       </header>
 
@@ -75,9 +81,7 @@ function Lesson() {
         {/* Kanji Section */}
         {data.kanji && data.kanji.length > 0 && (
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              한자 ({data.kanji.length})
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">한자 ({data.kanji.length})</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {data.kanji.map((item, index) => (
                 <div
@@ -85,13 +89,9 @@ function Lesson() {
                   className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
                 >
                   <div className="text-sm text-gray-500 mb-2">문제</div>
-                  <div className="text-2xl font-medium text-gray-800 mb-4">
-                    {item.prob}
-                  </div>
+                  <div className="text-2xl font-medium text-gray-800 mb-4">{item.prob}</div>
                   <div className="text-sm text-gray-500 mb-2">정답</div>
-                  <div className="text-3xl font-bold text-rose-500">
-                    {item.ans}
-                  </div>
+                  <div className="text-3xl font-bold text-rose-500">{item.ans}</div>
                 </div>
               ))}
             </div>
@@ -111,13 +111,9 @@ function Lesson() {
                   className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
                 >
                   <div className="text-sm text-gray-500 mb-2">문제</div>
-                  <div className="text-2xl font-medium text-gray-800 mb-4">
-                    {item.prob}
-                  </div>
+                  <div className="text-2xl font-medium text-gray-800 mb-4">{item.prob}</div>
                   <div className="text-sm text-gray-500 mb-2">정답</div>
-                  <div className="text-3xl font-bold text-indigo-500">
-                    {item.ans}
-                  </div>
+                  <div className="text-3xl font-bold text-indigo-500">{item.ans}</div>
                 </div>
               ))}
             </div>
