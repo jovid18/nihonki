@@ -20,7 +20,7 @@ function Lesson() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const response = await fetch(`/data/${id}.json`);
+        const response = await fetch(`${import.meta.env.BASE_URL}data/${id}.json`);
         if (!response.ok) {
           throw new Error('Failed to fetch lesson data');
         }
