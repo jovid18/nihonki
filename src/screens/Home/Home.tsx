@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 function Home() {
   const navigate = useNavigate();
 
-  const lessons = [14]; // 나중에 추가 가능
+  const lessons = [10, 14, 15, 18]; // 나중에 추가 가능
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-indigo-50 grid place-items-center p-4">

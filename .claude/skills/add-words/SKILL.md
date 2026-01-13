@@ -52,6 +52,7 @@ description: 일본어 단어를 추가할 때 사용. 사용자가 JSON 배열 
 5. 카타카나 단어의 경우: Claude가 한국어 뜻을 직접 작성
 6. `/Users/joseonghyeon/nihonki/public/data/{num}.json`에 바로 저장
 7. 원본 입력 파일 삭제
+8. `/Users/joseonghyeon/nihonki/src/screens/Home/Home.tsx`의 `lessons` 배열에 새 단원 번호 추가 (없는 경우에만, 오름차순 유지)
 
 ## 문자 타입 판별 기준
 
