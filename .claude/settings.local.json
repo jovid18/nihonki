@@ -10,7 +10,10 @@
       "Bash(node process.js:*)",
       "Bash(npm install:*)",
       "Bash(npm run dev:*)",
-      "Bash(git remote:*)"
+      "Bash(git remote:*)",
+      "Bash(git -C /Users/joseonghyeon/nihonki status)",
+      "Bash(git -C /Users/joseonghyeon/nihonki diff)",
+      "Bash(git -C /Users/joseonghyeon/nihonki log --oneline -5)"
     ]
   }
 }
